@@ -6,11 +6,6 @@ using MesPortal.Services.Interfaces;
 using MesPortal.Utilities;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using Newtonsoft.Json;
-using System.Net.Http.Json;
-using System.Text.Json;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 namespace MesPortal.Pages
 {
 	public partial class Index : ComponentBase

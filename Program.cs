@@ -49,7 +49,6 @@ builder.Services.AddSyncfusionBlazor(options => {
 });
 
 #endregion
-builder.Services.AddMemoryCache();
 var app = builder.Build();
 Console.WriteLine("Client App start");
 await app.RunAsync();

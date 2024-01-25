@@ -19,18 +19,18 @@
 		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
 		<PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
 		<PackageReference Include="Syncfusion.Blazor.BarcodeGenerator" Version="24.1.47" />
-		<PackageReference Include="Syncfusion.Blazor.Cards" Version="24.1.47" />
-		<PackageReference Include="Syncfusion.Blazor.Charts" Version="24.1.47" />
-		<PackageReference Include="Syncfusion.Blazor.CircularGauge" Version="24.1.47" />
-		<PackageReference Include="Syncfusion.Blazor.Diagram" Version="24.1.47" />
-		<PackageReference Include="Syncfusion.Blazor.Gantt" Version="24.1.47" />
+<!--		<PackageReference Include="Syncfusion.Blazor.Cards" Version="24.1.47" />-->
+<!--		<PackageReference Include="Syncfusion.Blazor.Charts" Version="24.1.47" />-->
+<!--		<PackageReference Include="Syncfusion.Blazor.CircularGauge" Version="24.1.47" />-->
+<!--		<PackageReference Include="Syncfusion.Blazor.Diagram" Version="24.1.47" />-->
+<!--		<PackageReference Include="Syncfusion.Blazor.Gantt" Version="24.1.47" />-->
 		<PackageReference Include="Syncfusion.Blazor.Grid" Version="24.1.47" />
 		<PackageReference Include="Syncfusion.Blazor.Layouts" Version="24.1.47" />
 		<PackageReference Include="Syncfusion.Blazor.Navigations" Version="24.1.47" />
 		<PackageReference Include="Syncfusion.Blazor.PivotTable" Version="24.1.47" />
 		<PackageReference Include="Syncfusion.Blazor.ProgressBar" Version="24.1.47" />
-		<PackageReference Include="Syncfusion.Blazor.Schedule" Version="24.1.47" />
-		<PackageReference Include="Syncfusion.Blazor.SfPdfViewer" Version="24.1.47" />
+<!--		<PackageReference Include="Syncfusion.Blazor.Schedule" Version="24.1.47" />-->
+<!--		<PackageReference Include="Syncfusion.Blazor.SfPdfViewer" Version="24.1.47" />-->
 		<PackageReference Include="Syncfusion.Blazor.Themes" Version="24.1.47" />
 		<PackageReference Include="Syncfusion.Blazor.TreeGrid" Version="24.1.47" />
 		<PackageReference Include="Syncfusion.Licensing" Version="24.1.47" />
