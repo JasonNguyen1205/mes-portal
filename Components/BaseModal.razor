@@ -1,0 +1,75 @@
+@namespace LineControl.Components
+@using Microsoft.AspNetCore.Components.Rendering
+@inherits BaseComponent
+<div class="e-modal  " style="overflow: hidden">
+    <SfDialog @ref="ComponentRef" Width="@Width" AllowDragging="true" AllowPrerender="true" Visible="false" EnableResize="true" Target="index-page" MinHeight="300px" ShowCloseIcon="false"  IsModal="true">
+        <DialogEvents Closed="@CancelClick"></DialogEvents>
+		<DialogButtons>
+			<DialogButton Content="OK" IsPrimary="true" OnClick="@OkClick"/>
+            <DialogButton Content="Cancel" OnClick="@CancelClick" />
+		</DialogButtons>
+		<DialogTemplates >
+			<Header >
+				<div class="header">
+					<div class="e-card-header-image">
+						<img height="30px" alt="logo" width="200px" src="FRIWO.svg"/>
+					</div>
+				</div>
+			</Header>
+			<Content>
+				<div class="e-card-content m-3">
+					@ChildContent
+				</div>
+			</Content>
+			<FooterTemplate >
+                <div class="d-flex gap-2">
+                    <SfButton class="w-100 mx-0 w-50" IconCss="fa fa-5x fa-xmark" IsPrimary="false" OnClick="@CancelClick" />
+                    <SfButton class="w-100 mx-0 w-50" style="background-color:#fbbf1b;border-color:#fbbf1b" IconCss="fa fa-5x fa-check" IsPrimary="true" OnClick="@OkClick" />
+                </div>
+                
+			</FooterTemplate>
+		</DialogTemplates>
+	</SfDialog>
+</div>
+
+@code {
+
+    [Parameter]
+    public string Width { get; set; } = "70%";
+
+    [Parameter]
+    public string Title { get; set; } = "FRIWO MES";
+
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public EventCallback OnOk { get; set; }
+
+    [Parameter]
+    public bool Visible { get; set; } = false;
+
+    public SfDialog ComponentRef { get; set; } = null!;
+
+
+    public void OpenDialog()
+    {
+
+        this.ComponentRef.ShowAsync();
+
+    }
+
+    public void CancelClick()
+    {
+        this.ComponentRef.HideAsync();
+    }
+
+    public void OkClick()
+    {
+        OnOk.InvokeAsync();
+        this.ComponentRef.HideAsync();
+    }
+
+
+
+}

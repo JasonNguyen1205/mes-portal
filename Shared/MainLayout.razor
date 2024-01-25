@@ -1,0 +1,25 @@
+@inherits LayoutComponentBase
+@inject NavigationManager NavigationManager
+@inject AuthService AuthService;
+
+
+<div style="z-index:1000">
+    <BaseHeader />
+</div>
+<div class="container-fluid m-0 p-0">
+	@Body
+</div>
+<div style="z-index:1000">
+    <BaseFooter />
+</div>
+
+
+@code {
+    protected override void OnAfterRender(bool firstRender)
+    {
+       
+    
+    }
+
+    
+}

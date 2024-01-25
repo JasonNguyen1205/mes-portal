@@ -1,0 +1,21 @@
+s{
+	"name": "MES - Line Control",
+	"short_name": "LineControl",
+	"start_url": "./",
+	"display": "standalone",
+	"background_color": "#ffffff",
+	"theme_color": "#03173d",
+	"prefer_related_applications": false,
+	"icons": [
+		{
+			"src": "FRIWO-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		},
+		{
+			"src": "FRIWO-190.png",
+			"type": "image/png",
+			"sizes": "192x192"
+		}
+	]
+}

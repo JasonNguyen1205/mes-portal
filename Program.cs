@@ -1,0 +1,56 @@
+using LineControl;
+using LineControl.Extensions;
+using LineControl.Models;
+using LineControl.Services;
+using LineControl.Utilities;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Hosting.Internal;
+using Syncfusion.Blazor;
+using Syncfusion.Licensing;
+
+var builder = WebAssemblyHostBuilder.CreateDefault(args);
+
+builder.RootComponents.Add<App>("#app");
+builder.RootComponents.Add<HeadOutlet>("head::after");
+
+#region Host & HttpClient Services
+
+var applicationSettingsSection = builder.Configuration.GetSection("ApplicationSettings");
+var host = new HostingEnvironment
+{
+	EnvironmentName = builder.HostEnvironment.Environment,
+	ApplicationName = builder.HostEnvironment.BaseAddress
+};
+
+var setting = builder.Services.Configure<ApplicationSettings>(options => {
+	applicationSettingsSection.Bind(host);
+});
+setting.AddLineControlServices(applicationSettingsSection.Get<ApplicationSettings>());
+builder.Services.AddSingleton<IHostEnvironment>(host);
+
+builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<BaseObjectService>();
+builder.Services.AddScoped<AppAuthenticationStateProvider>();
+builder.Services.AddScoped<AuthenticationStateProvider>(sp => sp.GetRequiredService<AppAuthenticationStateProvider>());
+builder.Services.AddAuthorizationCore();
+#endregion
+
+#region Syncfusion
+
+SyncfusionLicenseProvider.RegisterLicense(
+"Ngo9BigBOggjHTQxAR8/V1NHaF1cW2hIfEx1RHxQdld5ZFRHallYTnNWUj0eQnxTdEZiW39ccHNXQmVfVUB1XA==");
+builder.Services.AddSyncfusionBlazor(options => {
+	options.Animation = GlobalAnimationMode.Enable;
+	options.EnableRtl = false;
+	options.EnableRippleEffect = true;
+});
+
+#endregion
+builder.Services.AddMemoryCache();
+var app = builder.Build();
+Console.WriteLine("Client App start");
+await app.RunAsync();
+Console.WriteLine("Client App close");
