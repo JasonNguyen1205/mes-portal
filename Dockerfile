@@ -5,17 +5,17 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["LineControl.csproj", "./"]
-RUN dotnet restore "LineControl.csproj"
+COPY ["MesPortal.csproj", "./"]
+RUN dotnet restore "MesPortal.csproj"
 COPY . .
 WORKDIR "/src/"
-RUN dotnet build "LineControl.csproj" -c Release -o /app/build
+RUN dotnet build "MesPortal.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "LineControl.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "MesPortal.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "LineControl.dll"]
+ENTRYPOINT ["dotnet", "MesPortal.dll"]
 

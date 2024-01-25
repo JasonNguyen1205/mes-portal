@@ -1,12 +1,12 @@
-using LineControl.Models;
-using LineControl.Services;
-using LineControl.Services.Interfaces;
+using MesPortal.Models;
+using MesPortal.Services;
+using MesPortal.Services.Interfaces;
 
-namespace LineControl.Extensions
+namespace MesPortal.Extensions
 {
 	 public static class ServiceCollectionExtension
 	 {
-		  public static IServiceCollection AddLineControlServices(this IServiceCollection services,
+		  public static IServiceCollection AddMesPortalServices(this IServiceCollection services,
 			  ApplicationSettings? applicationSettings)
 		  {
 

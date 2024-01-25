@@ -1,9 +1,9 @@
-using LineControl.Pages;
+using MesPortal.Pages;
 using Syncfusion.Blazor.SfPdfViewer;
 using System.Collections.ObjectModel;
-using LineControl.Models;
+using MesPortal.Models;
 
-namespace LineControl.Services
+namespace MesPortal.Services
 {
 	public class BaseObjectService
 	{

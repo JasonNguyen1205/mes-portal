@@ -1,4 +1,4 @@
-namespace LineControl.Models
+namespace MesPortal.Models
 {
 	 public class ApplicationSettings
 	 {

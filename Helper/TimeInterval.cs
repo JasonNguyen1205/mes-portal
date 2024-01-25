@@ -1,7 +1,7 @@
 using System.Timers;
 using Timer=System.Timers.Timer;
 
-namespace LineControl.Helper
+namespace MesPortal.Helper
 {
 	public class TimeInterval
 	{

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Components.Authorization;
 using System.Security.Claims;
 
-namespace LineControl.Utilities
+namespace MesPortal.Utilities
 {
 	 public class AppAuthenticationStateProvider:AuthenticationStateProvider
 	 {

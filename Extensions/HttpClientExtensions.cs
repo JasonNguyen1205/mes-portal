@@ -2,7 +2,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace LineControl.Extensions
+namespace MesPortal.Extensions
 {
 	public static class HttpClientExtensions
 	{

@@ -1,6 +1,6 @@
 using System.Security.Claims;
 
-namespace LineControl.Services
+namespace MesPortal.Services
 {
 	 public class AuthService
 	 {

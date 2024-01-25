@@ -1,8 +1,8 @@
-using LineControl;
-using LineControl.Extensions;
-using LineControl.Models;
-using LineControl.Services;
-using LineControl.Utilities;
+using MesPortal;
+using MesPortal.Extensions;
+using MesPortal.Models;
+using MesPortal.Services;
+using MesPortal.Utilities;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -28,7 +28,7 @@ var host = new HostingEnvironment
 var setting = builder.Services.Configure<ApplicationSettings>(options => {
 	applicationSettingsSection.Bind(host);
 });
-setting.AddLineControlServices(applicationSettingsSection.Get<ApplicationSettings>());
+setting.AddMesPortalServices(applicationSettingsSection.Get<ApplicationSettings>());
 builder.Services.AddSingleton<IHostEnvironment>(host);
 
 builder.Services.AddScoped<AuthService>();

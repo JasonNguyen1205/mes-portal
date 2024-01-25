@@ -1,6 +1,6 @@
-using LineControl.Models;
+using MesPortal.Models;
 
-namespace LineControl.Services.Interfaces
+namespace MesPortal.Services.Interfaces
 {
 	public interface ILineService
 	{

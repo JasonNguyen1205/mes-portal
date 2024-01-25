@@ -1,9 +1,9 @@
 
-using LineControl.Components;
-using LineControl.Models;
-using LineControl.Services;
-using LineControl.Services.Interfaces;
-using LineControl.Utilities;
+using MesPortal.Components;
+using MesPortal.Models;
+using MesPortal.Services;
+using MesPortal.Services.Interfaces;
+using MesPortal.Utilities;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using Newtonsoft.Json;
@@ -11,7 +11,7 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace LineControl.Pages
+namespace MesPortal.Pages
 {
 	public partial class Index : ComponentBase
 	{

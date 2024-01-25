@@ -1,4 +1,4 @@
-namespace LineControl.Extensions
+namespace MesPortal.Extensions
 {
 	public class IntegerExtension {}
 }

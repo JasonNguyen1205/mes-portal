@@ -1,4 +1,4 @@
-namespace LineControl.Helper
+namespace MesPortal.Helper
 {
 	public class TimeFormat
 	{
