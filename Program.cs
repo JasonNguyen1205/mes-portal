@@ -41,7 +41,7 @@ builder.Services.AddAuthorizationCore();
 #region Syncfusion
 
 SyncfusionLicenseProvider.RegisterLicense(
-"Ngo9BigBOggjHTQxAR8/V1NHaF1cW2hIfEx1RHxQdld5ZFRHallYTnNWUj0eQnxTdEZiW39ccHNXQmVfVUB1XA==");
+"MzA2NTE4M0AzMjM0MmUzMDJlMzBheS9wQ0NRWGp1VDBQVHN1c2dGZHBtekJKMjhIM1JrQW51K2tQcUxscW44PQ==");
 builder.Services.AddSyncfusionBlazor(options => {
 	options.Animation = GlobalAnimationMode.Enable;
 	options.EnableRtl = false;
