@@ -1,5 +1,0 @@
-﻿services:
-   line_control:
-      build:
-         context: .
-         dockerfile: Dockerfile

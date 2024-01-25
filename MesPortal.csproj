@@ -5,7 +5,6 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
-		<DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 		<UserSecretsId>bc2c371c-6d0e-454e-bf4a-403ec001161b</UserSecretsId>
 		<RunAOTCompilation>true</RunAOTCompilation>
 		<WasmStripILAfterAOT>true</WasmStripILAfterAOT>
